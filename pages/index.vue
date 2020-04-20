@@ -113,6 +113,7 @@ import formatTable from '@/utils/formatTable'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import News from '@/data/news.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
+import convertLastDateDisplayText from '@/utils/formatDate'
 
 export default {
   components: {
@@ -191,8 +192,7 @@ export default {
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
         title: '松戸市の最新感染動向',
-        date: News.newsItems.slice(0).date
-//        date: Data.lastUpdate
+        date: convertLastDateDisplayText(Data.lastUpdate,News.newsItems[0].date)
       },
       newsItems: News.newsItems.slice(0, 5),
       metroGraphOption: {
