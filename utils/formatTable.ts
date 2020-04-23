@@ -1,11 +1,11 @@
 import dayjs from 'dayjs'
 
 const headers = [
-  { text: '日付', value: '日付'},
-  { text: '居住地', value: '居住地'},
-  { text: '年代', value: '年代'},
-  { text: '性別', value: '性別'},
-  { text: '退院', value: '退院', align: 'center'}
+  { text: '日付', value: '日付' },
+  { text: '居住地', value: '居住地' },
+  { text: '年代', value: '年代' },
+  { text: '性別', value: '性別' },
+  { text: '退院', value: '退院', align: 'center' }
 ]
 
 type DataType = {
