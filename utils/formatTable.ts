@@ -5,7 +5,7 @@ const headers = [
   { text: '居住地', value: '居住地', width: '10%' },
   { text: '年代', value: '年代', width: '10%' },
   { text: '性別', value: '性別', width: '10%' },
-  { text: '状況', value: '退院', align: 'center' }
+  { text: '状況', value: '退院', align: 'center', width: '60%' }
 ]
 
 type DataType = {
