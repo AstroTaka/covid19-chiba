@@ -31,7 +31,7 @@
         <li :class="[$style.box, $style.deceased]">
           <div :class="$style.pillar">
             <div :class="$style.content">
-              <span>待機</span>
+              <span>ホテル療養<br />自宅待機</span>
               <span>
                 <strong>{{ 待機.toLocaleString() }}</strong>
                 <span :class="$style.unit">人</span>
