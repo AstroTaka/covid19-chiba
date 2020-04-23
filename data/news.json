@@ -1,19 +1,24 @@
 {
   "newsItems": [
     {
+      "date": "2020-04-23T01:00:00.000Z",
+      "link": "http://www.city.matsudo.chiba.jp/suidou/oshirase/coronavirus.html",
+      "title": "新型コロナウイルス感染症の影響を踏まえた水道料金・下水道使用料の支払い猶予について(市営水道区域)"
+    },
+    {
       "date": "2020-04-23T00:00:00.000Z",
       "link": "http://www.city.matsudo.chiba.jp/suidou/oshirase/coronavirus.html",
       "title": "新型コロナウイルス感染症の影響を踏まえた水道料金・下水道使用料の支払い猶予について"
     },
     {
       "date": "2020-04-22T10:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/setaimukekyufukin.html",
-      "title": "世帯向け給付金（新型コロナウイルス感染症の影響を受ける方）"
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
+      "title": "新たに5名の新型コロナウイルス感染者が確認されました（4月22日）"
     },
     {
       "date": "2020-04-22T10:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
-      "title": "新たに5名の新型コロナウイルス感染者が確認されました（4月22日）"
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/setaimukekyufukin.html",
+      "title": "世帯向け給付金（新型コロナウイルス感染症の影響を受ける方）"
     },
     {
       "date": "2020-04-22T09:00:00.000Z",
@@ -117,13 +122,13 @@
     },
     {
       "date": "2020-04-08T05:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku_chugaku/houkagojidou/index.html",
-      "title": "新型コロナウイルス感染症拡大防止のための放課後児童クラブの対応について"
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/eventcancelncov.html",
+      "title": "新型コロナウイルス感染症拡大防止のため中止・延期になったイベント等"
     },
     {
       "date": "2020-04-08T05:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/eventcancelncov.html",
-      "title": "新型コロナウイルス感染症拡大防止のため中止・延期になったイベント等"
+      "link": "http://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku_chugaku/houkagojidou/index.html",
+      "title": "新型コロナウイルス感染症拡大防止のための放課後児童クラブの対応について"
     },
     {
       "date": "2020-04-08T04:00:00.000Z",
