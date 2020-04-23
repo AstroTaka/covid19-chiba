@@ -28,7 +28,18 @@
         </div>
       </div>
       <ul :class="$style.group">
-        <li :class="[$style.box, $style.parent, $style.hospitalized]">
+        <li :class="[$style.box, $style.deceased]">
+          <div :class="$style.pillar">
+            <div :class="$style.content">
+              <span>ホテル療養・自宅待機</span>
+              <span>
+                <strong>{{ 待機.toLocaleString() }}</strong>
+                <span :class="$style.unit">人</span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li :class="[$style.box, $style.parent, $style.hospitalized]">	        <li :class="[$style.box, $style.parent, $style.hospitalized]">
           <div :class="$style.pillar">
             <div :class="$style.content">
               <span>入院中</span>
@@ -122,6 +133,10 @@ export default Vue.extend({
       required: true
     },
     退院: {
+      type: Number,
+      required: true
+    },
+    待機: {
       type: Number,
       required: true
     }
