@@ -33,6 +33,7 @@
       white-space: nowrap;
       color: $gray-2;
       font-size: 14px;
+      width:50px
     }
     tbody {
       tr {
