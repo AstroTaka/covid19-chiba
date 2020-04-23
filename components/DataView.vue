@@ -94,14 +94,14 @@ export default Vue.extend({
       white-space: nowrap;
       &-unit {
         font-size: 0.6em;
-        width: 100%;
+        width: 50%;
       }
     }
     &-date {
       font-size: 12px;
       line-height: 12px;
       color: $gray-3;
-      width: 100%;
+      width: 50%;
       display: inline-block;
     }
   }
