@@ -1,6 +1,11 @@
 {
   "newsItems": [
     {
+      "date": "2020-04-28T06:00:00.000Z",
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/vsncov.html",
+      "title": "松戸市独自の新型コロナウイルス緊急対策"
+    },
+    {
       "date": "2020-04-28T01:00:00.000Z",
       "link": "http://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/hoikuenyouchien/korona.html",
       "title": "新型コロナウイルス感染症対策に係る保育施設の対応について"
@@ -77,13 +82,13 @@
     },
     {
       "date": "2020-04-22T10:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
-      "title": "新たに5名の新型コロナウイルス感染者が確認されました（4月22日）"
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/setaimukekyufukin.html",
+      "title": "世帯向け給付金（新型コロナウイルス感染症の影響を受ける方）"
     },
     {
       "date": "2020-04-22T10:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/setaimukekyufukin.html",
-      "title": "世帯向け給付金（新型コロナウイルス感染症の影響を受ける方）"
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
+      "title": "新たに5名の新型コロナウイルス感染者が確認されました（4月22日）"
     },
     {
       "date": "2020-04-22T09:00:00.000Z",
