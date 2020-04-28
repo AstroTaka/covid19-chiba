@@ -1,6 +1,11 @@
 {
   "newsItems": [
     {
+      "date": "2020-04-28T00:00:00.000Z",
+      "link": "http://www.city.matsudo.chiba.jp/shisei/soumu-saiyou/syokuinsaiyou/etc/kinkyukoyou.html",
+      "title": "新型コロナウイルス感染症拡大に伴う退職をよぎなくされたアルバイト学生の緊急雇用について"
+    },
+    {
       "date": "2020-04-27T07:00:00.000Z",
       "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
       "title": "本日新たな新型コロナウイルス感染者の発生はありませんでした（4月27日）"
