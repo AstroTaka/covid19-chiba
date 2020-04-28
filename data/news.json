@@ -1,19 +1,24 @@
 {
   "newsItems": [
     {
+      "date": "2020-04-28T10:00:00.000Z",
+      "link": "http://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku_chugaku/houkagojidou/setumei.html",
+      "title": "新型コロナウイルス感染症拡大防止のための放課後児童クラブの対応について"
+    },
+    {
       "date": "2020-04-28T09:00:00.000Z",
       "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
       "title": "新たに1名の新型コロナウイルス感染者が確認されました（4月28日）"
     },
     {
       "date": "2020-04-28T08:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kyouiku/oshirase/gakkoutaiou.html",
-      "title": "新年度における新型コロナウイルス感染症に係る学校の対応について"
+      "link": "http://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/hoikuenyouchien/korona.html",
+      "title": "新型コロナウイルス感染症対策に係る保育施設の対応について"
     },
     {
       "date": "2020-04-28T08:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/hoikuenyouchien/korona.html",
-      "title": "新型コロナウイルス感染症対策に係る保育施設の対応について"
+      "link": "http://www.city.matsudo.chiba.jp/kyouiku/oshirase/gakkoutaiou.html",
+      "title": "新年度における新型コロナウイルス感染症に係る学校の対応について"
     },
     {
       "date": "2020-04-28T07:00:00.000Z",
