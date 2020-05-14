@@ -1,6 +1,11 @@
 {
   "newsItems": [
     {
+      "date": "2020-05-14T02:00:00.000Z",
+      "link": "http://www.city.matsudo.chiba.jp/kurashi/anzen_anshin/sonae/hinanbasho/ncovhinan.html",
+      "title": "避難所における新型コロナウイルス感染症対策について"
+    },
+    {
       "date": "2020-05-13T08:00:00.000Z",
       "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
       "title": "新たな新型コロナウイルス感染者が1名確認されました（5月13日）"
@@ -22,13 +27,13 @@
     },
     {
       "date": "2020-05-11T08:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/vsncov.html",
-      "title": "松戸市独自の新型コロナウイルス緊急対策"
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
+      "title": "新たな新型コロナウイルス感染者の発生はありませんでした（5月11日）"
     },
     {
       "date": "2020-05-11T08:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
-      "title": "新たな新型コロナウイルス感染者の発生はありませんでした（5月11日）"
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/vsncov.html",
+      "title": "松戸市独自の新型コロナウイルス緊急対策"
     },
     {
       "date": "2020-05-11T02:00:00.000Z",
@@ -157,13 +162,13 @@
     },
     {
       "date": "2020-05-01T00:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/vsncov.html",
-      "title": "松戸市独自の新型コロナウイルス緊急対策"
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/eventcancelncov.html",
+      "title": "新型コロナウイルス感染症拡大防止のため中止・延期になったイベント等"
     },
     {
       "date": "2020-05-01T00:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/eventcancelncov.html",
-      "title": "新型コロナウイルス感染症拡大防止のため中止・延期になったイベント等"
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/vsncov.html",
+      "title": "松戸市独自の新型コロナウイルス緊急対策"
     },
     {
       "date": "2020-04-30T11:00:00.000Z",
