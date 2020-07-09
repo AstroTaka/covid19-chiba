@@ -32,10 +32,10 @@
         -->
         <time-bar-chart
           title="陽性反応者数の推移"
-          :title-id="'number-of-confirmed-cases'"
-          :chart-id="'time-bar-chart-patients'"
-          :chart-data="patientsGraph"
-          :date="patientsDate"
+          :title-id="'number-of-tested'"
+          :chart-id="'time-stacked-bar-chart-inspections'"
+          :chart-data="patientsAndNoSymptomsGraph"
+          :date="Data.patients_and_no_symptoms_summary.date"
           :unit="'人'"
         />
       </v-col>
