@@ -30,13 +30,15 @@
           "
         />
         -->
-        <time-bar-chart
+        <time-stacked-bar-chart
           title="陽性反応者数の推移"
           :title-id="'number-of-tested'"
           :chart-id="'time-stacked-bar-chart-inspections'"
           :chart-data="patientsAndNoSymptomsGraph"
           :date="Data.patients_and_no_symptoms_summary.date"
-          :unit="'人'"
+          :items="patientsAndNoSymptomsItems"
+          :labels="patientsAndNoSymptomsLabels"
+          :unit="'件'"
         />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
