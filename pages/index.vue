@@ -30,7 +30,7 @@
           "
         />
         -->
-        <time-stacked-bar-chart
+        <time-bar-chart
           title="陽性反応者数の推移"
           :title-id="'number-of-tested'"
           :chart-id="'time-stacked-bar-chart-inspections'"
