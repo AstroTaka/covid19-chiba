@@ -30,24 +30,14 @@
           "
         />
         -->
-        <time-stacked-bar-chart
+        <time-bar-chart
           title="陽性反応者数の推移"
-          :title-id="'number-of-tested'"
-          :chart-id="'time-stacked-bar-chart-inspections'"
-          :chart-data="patientsAndNoSymptomsGraph"
-          :date="Data.patients_and_no_symptoms_summary.date"
-          :items="patientsAndNoSymptomsItems"
-          :labels="patientsAndNoSymptomsLabels"
-          :unit="'件'"
-        >
-          <template #supplement>
-            <p class="Graph-Desc">
-              無症状病原体保有者：症状は無いがＰＣＲ検査が陽性だった者で、
-              他者へ感染させる可能性は低いとみられている。（出典：厚生労働省Ｑ＆Ａ一部改
-              変）
-            </p>
-          </template>
-        </time-stacked-bar-chart>
+          :title-id="'number-of-confirmed-cases'"
+          :chart-id="'time-bar-chart-patients'"
+          :chart-data="patientsGraph"
+          :date="patientsDate"
+          :unit="'人'"
+        />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <data-table
