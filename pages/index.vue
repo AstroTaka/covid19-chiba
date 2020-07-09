@@ -14,7 +14,7 @@
     />
     <v-row class="DataBlock">
       <v-col cols="12" md="6" class="DataCard">
-        <confirmed-cases-details-card />
+      <!--  <confirmed-cases-details-card /> -->
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <!--
@@ -62,7 +62,7 @@
           "
         />
       </v-col>
-      <v-col cols="12" md="6" class="DataCard">
+      <!-- <v-col cols="12" md="6" class="DataCard">
         <time-stacked-bar-chart
           title="検査実施数"
           :title-id="'number-of-tested'"
@@ -73,7 +73,7 @@
           :labels="inspectionsLabels"
           :unit="'件'"
         />
-      </v-col>
+      </v-col> -->
       <!-- <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
           title="新型コロナコールセンター相談件数"
