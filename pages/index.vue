@@ -17,7 +17,6 @@
       <confirmed-cases-details-card />
       </v-col> -->
       <v-col cols="12" md="6" class="DataCard">
-        <!--
         <time-bar-chart
           title="陽性患者数"
           :title-id="'number-of-confirmed-cases'"
@@ -29,7 +28,8 @@
             'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'
           "
         />
-        -->
+      </v-col>
+      <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
           title="陽性反応者数の推移"
           :title-id="'number-of-tested'"
