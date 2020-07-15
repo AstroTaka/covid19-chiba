@@ -28,7 +28,7 @@
             'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'
           "
         />
-<--        <time-bar-chart
+        <time-bar-chart
           title="陽性反応者数の推移"
           :title-id="'number-of-tested'"
           :chart-id="'time-stacked-bar-chart-inspections'"
@@ -37,9 +37,9 @@
           :items="patientsAndNoSymptomsItems"
           :labels="patientsAndNoSymptomsLabels"
           :unit="'件'"
-        /> -->
+        />
       </v-col>
-      <v-col cols="12" md="6" class="DataCard">
+<!--      <v-col cols="12" md="6" class="DataCard">
         <data-table
           :title="'陽性患者の属性'"
           :title-id="'attributes-of-confirmed-cases'"
@@ -51,7 +51,7 @@
             'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'
           "
         />
-      </v-col>
+      </v-col> -->
       <!-- <v-col cols="12" md="6" class="DataCard">
         <time-stacked-bar-chart
           title="検査実施数"
@@ -92,7 +92,7 @@
 
 <script>
 import PageHeader from '@/components/PageHeader.vue'
-// import TimeBarChart from '@/components/TimeBarChart.vue'
+import TimeBarChart from '@/components/TimeBarChart.vue'
 import TimeStackedBarChart from '@/components/TimeStackedBarChart.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
@@ -108,7 +108,7 @@ import convertLastDateDisplayText from '@/utils/formatDate'
 export default {
   components: {
     PageHeader,
-    // TimeBarChart,
+    TimeBarChart,
     TimeStackedBarChart,
     WhatsNew,
     StaticInfo,
