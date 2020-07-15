@@ -13,9 +13,9 @@
       :btn-text="'相談の手順を見る'"
     />
     <v-row class="DataBlock">
-      <!-- <v-col cols="12" md="6" class="DataCard">
+      <v-col cols="12" md="6" class="DataCard">
       <confirmed-cases-details-card />
-      </v-col> -->
+      </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <time-bar-chart
           title="陽性患者数"
@@ -28,9 +28,7 @@
             'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'
           "
         />
-      </v-col>
-      <v-col cols="12" md="6" class="DataCard">
-        <time-bar-chart
+<--        <time-bar-chart
           title="陽性反応者数の推移"
           :title-id="'number-of-tested'"
           :chart-id="'time-stacked-bar-chart-inspections'"
@@ -39,7 +37,7 @@
           :items="patientsAndNoSymptomsItems"
           :labels="patientsAndNoSymptomsLabels"
           :unit="'件'"
-        />
+        /> -->
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
         <data-table
