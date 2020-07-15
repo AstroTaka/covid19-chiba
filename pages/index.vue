@@ -17,18 +17,7 @@
       <confirmed-cases-details-card />
       </v-col>
       <v-col cols="12" md="6" class="DataCard">
-        <time-bar-chart
-          title="陽性患者数"
-          :title-id="'number-of-confirmed-cases'"
-          :chart-id="'time-bar-chart-patients'"
-          :chart-data="patientsGraph"
-          :date="Data.patients.date"
-          :unit="'人'"
-          :url="
-            'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'
-          "
-        />
-        <time-bar-chart
+        <time-stacked-bar-chart
           title="陽性反応者数の推移"
           :title-id="'number-of-tested'"
           :chart-id="'time-stacked-bar-chart-inspections'"
@@ -37,9 +26,17 @@
           :items="patientsAndNoSymptomsItems"
           :labels="patientsAndNoSymptomsLabels"
           :unit="'件'"
-        />
+        >
+          <template #supplement>
+            <p class="Graph-Desc">
+              無症状病原体保有者：症状は無いがＰＣＲ検査が陽性だった者で、
+              他者へ感染させる可能性は低いとみられている。（出典：厚生労働省Ｑ＆Ａ一部改
+              変）
+            </p>
+          </template>
+        </time-stacked-bar-chart>
       </v-col>
-<!--      <v-col cols="12" md="6" class="DataCard">
+      <v-col cols="12" md="6" class="DataCard">
         <data-table
           :title="'陽性患者の属性'"
           :title-id="'attributes-of-confirmed-cases'"
@@ -51,7 +48,7 @@
             'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'
           "
         />
-      </v-col> -->
+      </v-col>
       <!-- <v-col cols="12" md="6" class="DataCard">
         <time-stacked-bar-chart
           title="検査実施数"
