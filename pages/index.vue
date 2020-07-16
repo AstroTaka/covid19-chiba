@@ -99,8 +99,8 @@ export default {
   },
   data() {
     const sumInfoOfPatients = {
-      lText: Data.patients.data["小計"].reduce((a, c) => a + c),
-      sText: Data.patients_list.date + 'の累計',
+      lText: "",
+      sText: "",
       unit: '人'
     }
     const data = {
