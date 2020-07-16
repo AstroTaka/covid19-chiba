@@ -103,7 +103,7 @@ export default {
     
     const data = {
       DataPub: {},
-      //patientsTable,
+      patientsTable: {},
       patientsGraph: {},
       inspectionsGraph: [],
       inspectionsDate: {},
@@ -113,6 +113,7 @@ export default {
       patientsDate: {},
       patientsLabels: [],
       confirmedCases: {},
+      sumInfoOfPatients,
       loading: true,
       errored: false,
       headerItem: {},
