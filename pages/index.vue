@@ -57,19 +57,6 @@
             :unit="'件'"
           />
         </v-col>
-    <!---    <v-col cols="12" md="6" class="DataCard">
-          <data-table
-            :title="'陽性患者の属性'"
-            :title-id="'attributes-of-confirmed-cases'"
-            :chart-data="patientsTable"
-            :chart-option="{}"
-            :date="Data.patients_list.date"
-            :info="sumInfoOfPatients"
-            :url="
-              'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'
-            "
-          />
-        </v-col> --->
       </v-row>
     </div>
   </div>
@@ -98,14 +85,6 @@ export default {
     ConfirmedCasesDetailsTable
   },
   data() {
-  <!---
-    const sumInfoOfPatients = {
-      lText: "1234",
-      sText: "5678",
-      unit: '人'
-    }
-    const patientsTable = formatTable(Data.patients_list.data)
-    --->
     const data = {
       DataPub: {},
       patientsGraph: {},
@@ -180,7 +159,7 @@ export default {
           title: '県内の最新感染動向',
           date: this.DataPub.lastUpdate
         }
-        this.patientsGraph = formatGraph(this.DataPub.patients.data)
+        this.patientsGraph = formatGraph(Data.patients_list.data)
         this.inspectionsDate = this.DataPub.inspections_summary.date
         this.inspectionsGraph = [
           this.DataPub.inspections_summary.data['陽性'],
