@@ -90,11 +90,11 @@ export default {
   data() {
   
     // const patientsTable = formatTable(Data.patients_list.data)
-    // const sumInfoOfPatients = {
-    //  lText: 12345,
-    //  sText: '12345の累計',
-    //  unit: '人'
-    //}
+    const sumInfoOfPatients = {
+      lText: 12345,
+      sText: '12345の累計',
+      unit: '人'
+    }
     const inspectionsItems = [
       '市中感染・輸入例（疑い例・接触者調査）',
       'その他（チャーター便・クルーズ便等）'
