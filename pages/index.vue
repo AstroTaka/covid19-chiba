@@ -68,6 +68,7 @@ import TimeBarChart from '@/components/TimeBarChart.vue'
 import TimeStackedBarChart from '@/components/TimeStackedBarChart.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
+import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import News from '@/data/news.json'
 import DataView from '@/components/DataView.vue'
@@ -146,9 +147,48 @@ export default {
         }
       }
     }
+
+    data.DataPub = Data
+    data.headerItem = {
+      icon: 'mdi-chart-timeline-variant',
+      title: '県内の最新感染動向',
+      date: data.DataPub.lastUpdate
+    }
+    data.patientsGraph = formatGraph(data.DataPub.patients.data)
+    data.inspectionsDate = data.DataPub.inspections_summary.date
+    data.inspectionsGraph = [
+      data.DataPub.inspections_summary.data['陽性'],
+      data.DataPub.inspections_summary.data['陰性']
+    ]
+    data.inspectionsItems = ['陽性', '陰性']
+    data.inspectionsLabels = data.DataPub.inspections_summary.labels
+    data.patientsDate = data.DataPub.patients_summary.date
+    data.patientsLabels = data.DataPub.patients_summary.labels
+    const data = data.DataPub.main_summary
+    const formattedData = {
+      検査実施人数: data.inspections_total_count,
+      陽性患者: data.patients_count,
+      現在の感染者:
+        data.hospital_count +
+        data.hospital_waiting_count +
+        data.hotel_stay_count +
+        data.home_stay_count,
+      軽症中等症:
+        data.hospital_count +
+        data.hospital_waiting_count +
+        data.hotel_stay_count +
+        data.home_stay_count -
+        data.severe_injury_count,
+      重症: data.severe_injury_count,
+      死亡: data.death_count,
+      退院_療養終了: data.discharge_count + data.finish_stay_count
+    }
+    // data.confirmedCases = formatConfirmedCases(data.DataPub.main_summary)
+    data.confirmedCases = formattedData
+
     return data
   },
-  mounted() {
+<!--  mounted() {
     axios
       .get('https://covid19chiba.s3-ap-northeast-1.amazonaws.com/DataPub.json')
       .then(response => {
@@ -195,7 +235,7 @@ export default {
         this.error = error
       })
       .finally(() => (this.loading = false))
-  },
+  }, -->
   head() {
     return {
       title: '県内の最新感染動向'
