@@ -69,7 +69,10 @@ import TimeStackedBarChart from '@/components/TimeStackedBarChart.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
 import Data from '@/data/data.json'
+import DataTable from '@/components/DataTable.vue'
 import formatGraph from '@/utils/formatGraph'
+import formatTable from '@/utils/formatTable'
+import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import News from '@/data/news.json'
 import DataView from '@/components/DataView.vue'
 import ConfirmedCasesDetailsTable from '@/components/ConfirmedCasesDetailsTable.vue'
@@ -92,6 +95,11 @@ export default {
     //  sText: '12345の累計',
     //  unit: '人'
     //}
+    const inspectionsItems = [
+      '市中感染・輸入例（疑い例・接触者調査）',
+      'その他（チャーター便・クルーズ便等）'
+    ]
+
     
     const data = {
       DataPub: {},
@@ -99,7 +107,8 @@ export default {
       patientsGraph: {},
       inspectionsGraph: [],
       inspectionsDate: {},
-      inspectionsItems: [],
+      //inspectionsItems: [],
+      inspectionsItems,
       inspectionsLabels: [],
       patientsDate: {},
       patientsLabels: [],
