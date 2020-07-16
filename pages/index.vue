@@ -61,7 +61,7 @@
           <data-table
             :title="'陽性患者の属性'"
             :title-id="'attributes-of-confirmed-cases'"
-            :chart-data="patientsTable"
+            :chart-data=""
             :chart-option="{}"
             :date="Data.patients_list.date"
             :info="sumInfoOfPatients"
