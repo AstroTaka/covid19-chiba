@@ -85,8 +85,17 @@ export default {
     ConfirmedCasesDetailsTable
   },
   data() {
+  
+     const patientsTable = formatTable(Data.patients_list.data)
+     const sumInfoOfPatients = {
+      lText: 12345,
+      sText: '12345の累計',
+      unit: '人'
+    }
+    
     const data = {
       DataPub: {},
+      patientsTable,
       patientsGraph: {},
       inspectionsGraph: [],
       inspectionsDate: {},
@@ -95,6 +104,7 @@ export default {
       patientsDate: {},
       patientsLabels: [],
       confirmedCases: {},
+      sumInfoOfPatients,
       loading: true,
       errored: false,
       headerItem: {},
