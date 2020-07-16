@@ -103,6 +103,8 @@ export default {
       sText: "5678",
       unit: '人'
     }
+    const patientsTable = formatTable(Data.patients_list.data)
+    
     const data = {
       DataPub: {},
       patientsGraph: {},
