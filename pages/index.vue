@@ -68,7 +68,6 @@ import TimeBarChart from '@/components/TimeBarChart.vue'
 import TimeStackedBarChart from '@/components/TimeStackedBarChart.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
-//import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import News from '@/data/news.json'
 import DataView from '@/components/DataView.vue'
@@ -159,7 +158,7 @@ export default {
           title: '県内の最新感染動向',
           date: this.DataPub.lastUpdate
         }
-        this.patientsGraph = formatGraph(Data.patients_list.data)
+        this.patientsGraph = formatGraph(this.DataPub.patients.data)
         this.inspectionsDate = this.DataPub.inspections_summary.date
         this.inspectionsGraph = [
           this.DataPub.inspections_summary.data['陽性'],
