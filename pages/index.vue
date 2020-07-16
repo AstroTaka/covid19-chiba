@@ -90,7 +90,7 @@ export default {
   },
   data() {
   
-    // const patientsTable = formatTable(Data.patients_list.data)
+    const patientsTable = formatTable(Data.patients_list.data)
     const sumInfoOfPatients = {
       lText: 12345,
       sText: '12345の累計',
@@ -104,7 +104,7 @@ export default {
     
     const data = {
       DataPub: {},
-      patientsTable: {},
+      patientsTable,
       patientsGraph: {},
       inspectionsGraph: [],
       inspectionsDate: {},
