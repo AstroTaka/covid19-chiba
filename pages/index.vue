@@ -99,8 +99,8 @@ export default {
   },
   data() {
     const sumInfoOfPatients = {
-      lText: "",
-      sText: "",
+      lText: "1234",
+      sText: "5678",
       unit: '人'
     }
     const data = {
