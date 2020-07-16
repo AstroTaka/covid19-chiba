@@ -63,9 +63,8 @@
             :title-id="'attributes-of-confirmed-cases'"
             :chart-data="patientsTable"
             :chart-option="{}"
-            :date="Data.patients-list.date"
-            <!-- :info="sumInfoOfPatients" -->
-            :info=""
+            :date="Data.patients_list.date"
+            :info="sumInfoOfPatients"
             :url="
               'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'
             "
@@ -99,6 +98,11 @@ export default {
     ConfirmedCasesDetailsTable
   },
   data() {
+    const sumInfoOfPatients = {
+      lText: Data.patients.data["小計"].reduce((a, c) => a + c),
+      sText: Data.patients_list.date + 'の累計',
+      unit: '人'
+    }
     const data = {
       DataPub: {},
       patientsGraph: {},
