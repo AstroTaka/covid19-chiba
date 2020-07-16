@@ -98,13 +98,14 @@ export default {
     ConfirmedCasesDetailsTable
   },
   data() {
+  <!---
     const sumInfoOfPatients = {
       lText: "1234",
       sText: "5678",
       unit: '人'
     }
     const patientsTable = formatTable(Data.patients_list.data)
-    
+    --->
     const data = {
       DataPub: {},
       patientsGraph: {},
