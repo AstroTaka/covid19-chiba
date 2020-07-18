@@ -13,15 +13,8 @@
           <v-icon aria-label="別タブで開く" role="img" :aria-hidden="false">
             mdi-open-in-new
           </v-icon> </a
-        >を改変して個人的に作られた松戸市とは関係無い非公式のサイトです。<br /><a
-          href="https://covid19.civictech.chiba.jp/"
-          target="_blank"
-          rel="noopener"
-          >千葉県公式新型コロナウイルス対策サイト
-          <v-icon aria-label="別タブで開く" role="img" :aria-hidden="false">
-            mdi-open-in-new
-          </v-icon> </a
-        >と同じデータから陽性反応者については居住地が松戸市のデータのみを使用し、検査実施数については松戸保健所で取り扱われたデータのみを使用しています。
+        >を改変して個人的に作られた松戸市とは関係無い非公式のサイトです。<br />
+          千葉県が公表しているデータをそのまま使用していますが、松戸市のデータは千葉県のデータから居住地が松戸市の物を抽出して作成しています。
       </p>
     </StaticCard>
     <StaticCard>
