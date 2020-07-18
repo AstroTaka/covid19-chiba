@@ -72,16 +72,6 @@
                 {{ $t('Chiba Prefecture') }}
               </a>
             </dd>
-            <dd>
-              <a
-                href="https://www.city.chiba.jp/hokenfukushi/kenkou/kikaku/kansensyoujyouhou.html"
-                target="_blank"
-                rel="noopener"
-                class="sponsor__data"
-              >
-                {{ $t('Chiba City') }}
-              </a>
-            </dd>
           </dl>
         </div>
       </footer>
