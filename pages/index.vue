@@ -18,8 +18,31 @@
       />
       <v-row class="DataBlock">
         <v-col cols="12" md="6" class="DataCard">
+          <time-bar-chart
+            title="松戸市の陽性反応者数の推移"
+            :title-id="'number-of-confirmed-cases'"
+            :chart-id="'time-bar-chart-patients'"
+            :chart-data="patientsGraph"
+            :date="patientsListDate"
+            :unit="'人'"
+          />
+        </v-col>
+        <v-col cols="12" md="6" class="DataCard">
+          <data-table
+            :title="'松戸市の陽性患者の属性'"
+            :title-id="'attributes-of-confirmed-cases'"
+            :chart-data="patientsTable"
+            :chart-option="{}"
+            :date="patientsListDate"
+            :info="sumInfoOfPatients"
+            :url="
+              'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000068'
+            "
+          />
+        </v-col>
+        <v-col cols="12" md="6" class="DataCard">
           <data-view
-            :title="$t('検査陽性者の状況')"
+            :title="$t('千葉県内の検査陽性者の状況')"
             :title-id="'details-of-confirmed-cases'"
             :date="patientsDate"
           >
@@ -36,18 +59,21 @@
           </data-view>
         </v-col>
         <v-col cols="12" md="6" class="DataCard">
-          <time-bar-chart
-            title="陽性反応者数の推移"
-            :title-id="'number-of-confirmed-cases'"
-            :chart-id="'time-bar-chart-patients'"
-            :chart-data="patientsGraph"
-            :date="patientsDate"
+          <time-stacked-bar-chart
+            title="千葉県内の患者数の推移"
+            :title-id="'number-of-patients'"
+            :chart-id="'time-stacked-bar-chart-patients'"
+            :chart-data="currentPatientsGraph"
+            :date="currentPatientsDate"
+            :items="currentPatientsTransitionItems"
+            :labels="currentPatientsLabels"
             :unit="'人'"
           />
         </v-col>
+
         <v-col cols="12" md="6" class="DataCard">
           <time-stacked-bar-chart
-            title="検査実施数"
+            title="千葉県内の検査実施数"
             :title-id="'number-of-tested'"
             :chart-id="'time-stacked-bar-chart-inspections'"
             :chart-data="inspectionsGraph"
@@ -61,7 +87,7 @@
     </div>
   </div>
 </template>
-<script>
+<script lang="ts">
 import axios from 'axios'
 import PageHeader from '@/components/PageHeader.vue'
 import TimeBarChart from '@/components/TimeBarChart.vue'
@@ -77,6 +103,9 @@ import News from '@/data/news.json'
 import DataView from '@/components/DataView.vue'
 import ConfirmedCasesDetailsTable from '@/components/ConfirmedCasesDetailsTable.vue'
 
+import Vue from 'vue'
+import { convertDateToDataTableText } from '@/utils/formatDate'
+
 export default {
   components: {
     PageHeader,
@@ -89,34 +118,25 @@ export default {
     ConfirmedCasesDetailsTable
   },
   data() {
-  
-    const patientsTable = formatTable(Data.patients_list.data)
-    const sumInfoOfPatients = {
-      lText: 12345,
-      sText: '12345の累計',
-      unit: '人'
-    }
-    const inspectionsItems = [
-      '市中感染・輸入例（疑い例・接触者調査）',
-      'その他（チャーター便・クルーズ便等）'
-    ]
-
-    
     const data = {
       DataPub: {},
-      patientsTable,
+      patientsTable: {},
       patientsGraph: {},
-      inspectionsGraph: [],
+      inspectionsGraph: {},
       inspectionsDate: {},
-      //inspectionsItems: [],
-      inspectionsItems,
+      inspectionsItems: [],
       inspectionsLabels: [],
+      currentPatientsGraph: {},
+      currentPatientsLabels: [],
       patientsDate: {},
+      patientsListDate: {},
       patientsLabels: [],
+      patientsTransitionItems: [],
+      patientsTransitionLabels: [],
       confirmedCases: {},
-      sumInfoOfPatients,
       loading: true,
       errored: false,
+      sumInfoOfPatients: {},
       headerItem: {},
       newsItems: News.newsItems.slice(0, 5),
       metroGraphOption: {
@@ -170,56 +190,68 @@ export default {
     return data
   },
   mounted() {
-    axios
-      .get('https://covid19chiba.s3-ap-northeast-1.amazonaws.com/DataPub.json')
-      .then(response => {
-        this.DataPub = response.data
-        this.headerItem = {
-          icon: 'mdi-chart-timeline-variant',
-          title: '県内の最新感染動向',
-          date: this.DataPub.lastUpdate
-        }
-        this.patientsGraph = formatGraph(this.DataPub.patients.data)
-        this.inspectionsDate = this.DataPub.inspections_summary.date
-        this.inspectionsGraph = [
-          this.DataPub.inspections_summary.data['陽性'],
-          this.DataPub.inspections_summary.data['陰性']
-        ]
-        this.inspectionsItems = ['陽性', '陰性']
-        this.inspectionsLabels = this.DataPub.inspections_summary.labels
-        this.patientsDate = this.DataPub.patients_summary.date
-        this.patientsLabels = this.DataPub.patients_summary.labels
-        const data = this.DataPub.main_summary
-        const formattedData = {
-          検査実施人数: data.inspections_total_count,
-          陽性患者: data.patients_count,
-          現在の感染者:
-            data.hospital_count +
-            data.hospital_waiting_count +
-            data.hotel_stay_count +
-            data.home_stay_count,
-          軽症中等症:
-            data.hospital_count +
-            data.hospital_waiting_count +
-            data.hotel_stay_count +
-            data.home_stay_count -
-            data.severe_injury_count,
-          重症: data.severe_injury_count,
-          死亡: data.death_count,
-          退院_療養終了: data.discharge_count + data.finish_stay_count
-        }
-        // this.confirmedCases = formatConfirmedCases(this.DataPub.main_summary)
-        this.confirmedCases = formattedData
-      })
-      .catch(error => {
-        this.errored = true
-        this.error = error
-      })
-      .finally(() => (this.loading = false))
+    this.DataPub = Data
+    this.headerItem = {
+      icon: 'mdi-chart-timeline-variant',
+      title: '松戸市の最新感染動向',
+      date: this.DataPub.lastUpdate
+    }
+    this.patientsGraph = formatGraph(this.DataPub.patients.data)
+    this.patientsTable = formatTable(this.DataPub.patients_list.data)
+    this.sumInfoOfPatients = {
+      lText: this.DataPub.patients.data.reduce((a, c) => a + c.小計,0),
+      sText: convertDateToDataTableText(this.DataPub.patients_list.data[this.DataPub.patients_list.data.length -1].リリース日) + 'の累計',
+      unit: '人'
+    }
+
+    this.inspectionsDate = this.DataPub.inspections_summary.date
+    this.inspectionsGraph = [
+      this.DataPub.inspections_summary.data['陽性'],
+      this.DataPub.inspections_summary.data['陰性']
+    ]
+    this.inspectionsItems = ['陽性', '陰性']
+
+    this.currentPatientsGraph = [
+      this.DataPub.current_patients_summary.data['未入院'],
+      this.DataPub.current_patients_summary.data['入院中']
+    ]
+    this.currentPatientsTransitionItems = ['入院調整中・ホテル療養・その他','入院中']
+    this.currentPatientsDate = this.DataPub.current_patients_summary.date
+    this.currentPatientsLabels = this.DataPub.current_patients_summary.labels
+
+    this.inspectionsLabels = this.DataPub.inspections_summary.labels
+    this.patientsDate = this.DataPub.patients_summary.date
+    this.patientsListDate = this.DataPub.patients_list.date
+    this.patientsLabels = this.DataPub.patients_summary.labels
+    const data = this.DataPub.main_summary
+    const formattedData = {
+      検査実施人数: data.inspections_total_count,
+      陽性患者: data.patients_count,
+      現在の感染者:
+        data.hospital_count +
+        data.hospital_waiting_count +
+        data.hotel_stay_count +
+        data.home_stay_count +
+        data.other_count,
+      入院中:
+        data.hospital_count,
+      入院調整中:
+        data.hospital_waiting_count,
+      ホテル療養:
+        data.hotel_stay_count,
+      その他:
+        data.other_count,
+      重症: data.severe_injury_count,
+      死亡: data.death_count,
+      退院_療養終了: data.discharge_count + data.finish_stay_count
+    }
+    // this.confirmedCases = formatConfirmedCases(this.DataPub.main_summary)
+    this.confirmedCases = formattedData
+    this.loading = false
   },
   head() {
     return {
-      title: '県内の最新感染動向'
+      title: '松戸市の最新感染動向'
     }
   }
 }
