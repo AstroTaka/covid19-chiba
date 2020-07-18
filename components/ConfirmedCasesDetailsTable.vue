@@ -34,9 +34,42 @@
             <li :class="[$style.box, $style.short, $style.minor]">
               <div :class="$style.pillar">
                 <div :class="$style.content">
-                  <span>軽症・中等症</span>
+                  <span>入院中</span>
                   <span>
-                    <strong>{{ 軽症中等症.toLocaleString() }}</strong>
+                    <strong>{{ 入院中.toLocaleString() }}</strong>
+                    <span :class="$style.unit">人</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li :class="[$style.box, $style.short, $style.minor]">
+              <div :class="$style.pillar">
+                <div :class="$style.content">
+                  <span>入院調整中</span>
+                  <span>
+                    <strong>{{ 入院調整中.toLocaleString() }}</strong>
+                    <span :class="$style.unit">人</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li :class="[$style.box, $style.short, $style.minor]">
+              <div :class="$style.pillar">
+                <div :class="$style.content">
+                  <span>ホテル療養</span>
+                  <span>
+                    <strong>{{ ホテル療養.toLocaleString() }}</strong>
+                    <span :class="$style.unit">人</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li :class="[$style.box, $style.short, $style.minor]">
+              <div :class="$style.pillar">
+                <div :class="$style.content">
+                  <span>その他</span>
+                  <span>
+                    <strong>{{ その他.toLocaleString() }}</strong>
                     <span :class="$style.unit">人</span>
                   </span>
                 </div>
@@ -99,7 +132,23 @@ export default Vue.extend({
       type: Number,
       required: true
     },
-    軽症中等症: {
+//    軽症中等症: {
+//      type: Number,
+//      required: true
+//    },
+    入院中: {
+      type: Number,
+      required: true
+    },
+    入院調整中: {
+      type: Number,
+      required: true
+    },
+    ホテル療養: {
+      type: Number,
+      required: true
+    },
+    その他: {
       type: Number,
       required: true
     },
