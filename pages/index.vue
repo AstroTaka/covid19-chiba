@@ -200,7 +200,8 @@ export default {
     this.patientsTable = formatTable(this.DataPub.patients_list.data)
     this.sumInfoOfPatients = {
       lText: this.DataPub.patients.data.reduce((a, c) => a + c.小計,0),
-      sText: convertDateToDataTableText(this.DataPub.patients_list.data[this.DataPub.patients_list.data.length -1].リリース日) + 'の累計',
+      sText: convertDateToDataTableText(this.DataPub.patients_list.date) + 'の累計',
+      //sText: convertDateToDataTableText(this.DataPub.patients_list.data[this.DataPub.patients_list.data.length -1].リリース日) + 'の累計',
       //sText: this.DataPub.patients_list.data[this.DataPub.patients_list.data.length -1].リリース日 + 'の累計',
       unit: '人'
     }
