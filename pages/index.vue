@@ -72,7 +72,17 @@
         </v-col>
 
         <v-col cols="12" md="6" class="DataCard">
-          <time-stacked-bar-chart
+           <time-bar-chart
+            title="千葉県内の陽性反応者数の推移"
+            :title-id="'number-of-confirmed-cases-chiba'"
+            :chart-id="'time-bar-chart-patients-chiba'"
+            :chart-data="patientsChibaGraph"
+            :date="patientsChibaDate"
+            :unit="'人'"
+          /> 
+        </v-col>
+        <v-col cols="12" md="6" class="DataCard">
+         <time-stacked-bar-chart
             title="千葉県内の検査実施数"
             :title-id="'number-of-tested'"
             :chart-id="'time-stacked-bar-chart-inspections'"
@@ -122,6 +132,7 @@ export default {
       DataPub: {},
       patientsTable: {},
       patientsGraph: {},
+      patientsChibaGraph: {},
       inspectionsGraph: {},
       inspectionsDate: {},
       inspectionsItems: [],
@@ -129,6 +140,7 @@ export default {
       currentPatientsGraph: {},
       currentPatientsLabels: [],
       patientsDate: {},
+      patientsChibaDate: {},
       patientsListDate: {},
       patientsLabels: [],
       patientsTransitionItems: [],
@@ -197,6 +209,7 @@ export default {
       date: this.DataPub.lastUpdate
     }
     this.patientsGraph = formatGraph(this.DataPub.patients.data)
+    this.patientsChibaGraph = formatGraph(this.DataPub.patients_chiba.data)
     this.patientsTable = formatTable(this.DataPub.patients_list.data)
     this.sumInfoOfPatients = {
       lText: this.DataPub.patients.data.reduce((a, c) => a + c.小計,0),
@@ -215,14 +228,16 @@ export default {
 
     this.currentPatientsGraph = [
       this.DataPub.current_patients_summary.data['未入院'],
-      this.DataPub.current_patients_summary.data['入院中']
+      this.DataPub.current_patients_summary.data['入院中'],
+      this.DataPub.current_patients_summary.data['重症']
     ]
-    this.currentPatientsTransitionItems = ['入院調整中・ホテル療養・その他','入院中']
+    this.currentPatientsTransitionItems = ['未入院','入院中','重症']
     this.currentPatientsDate = this.DataPub.current_patients_summary.date
     this.currentPatientsLabels = this.DataPub.current_patients_summary.labels
 
     this.inspectionsLabels = this.DataPub.inspections_summary.labels
     this.patientsDate = this.DataPub.patients_summary.date
+    this.patientsChibaDate = this.DataPub.patients_chiba.date
     this.patientsListDate = this.DataPub.patients_list.date
     this.patientsLabels = this.DataPub.patients_summary.labels
     const data = this.DataPub.main_summary
