@@ -14,8 +14,8 @@ const surfaceStyleB: SurfaceStyle = {
 }
 
 const surfaceStyleC: SurfaceStyle = {
-  strokeColor: '#5a8055',
-  fillColor: '#c5e2c6'
+  strokeColor: '#ff8055',
+  fillColor: '#ffe286'
 }
 
 export function getGraphSeriesStyle(seriesLength: number) {
