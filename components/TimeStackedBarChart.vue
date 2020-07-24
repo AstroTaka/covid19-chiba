@@ -182,8 +182,8 @@ const options: ThisTypedComponentOptionsWithRecordProps<
   },
   data: () => ({
     dataKind: 'transition',
-    displayLegends: [true, true],
-    colors: getGraphSeriesStyle(2),
+    displayLegends: [true, true, true],
+    colors: getGraphSeriesStyle(3),
     chartWidth: null,
     canvas: true
   }),
@@ -375,6 +375,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
       const borderWidth = { left: 0, top: 0, right: 0, bottom: 0 }
       return {
         labels: ['2020/1/1'],
+/*
         datasets: [
           {
             data: [this.displayData.datasets[0].data[n]],
@@ -387,6 +388,14 @@ const options: ThisTypedComponentOptionsWithRecordProps<
             borderWidth
           }
         ]
+*/
+        datasets: this.chartData.map((item, index) => {
+          return {
+            data: [this.displayData.datasets[index].data[n]],
+            backgroundColor: 'transparent',
+            borderWidth
+          }
+        })
       }
     },
     displayOptionHeader() {
@@ -519,7 +528,11 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     eachArraySum(chartDataArray: number[][]) {
       const sumArray: number[] = []
       for (let i = 0; i < chartDataArray[0].length; i++) {
-        sumArray.push(chartDataArray[0][i] + chartDataArray[1][i])
+        let sum = 0
+        for(let j=0; j < chartDataArray.length; j++){
+          sum += chartDataArray[j][i]
+        }
+        sumArray.push(sum)
       }
       return sumArray
     }
