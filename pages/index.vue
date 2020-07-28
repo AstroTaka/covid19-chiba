@@ -92,7 +92,7 @@
 
         <v-col cols="12" md="6" class="DataCard">
           <time-bar-chart
-            title="千葉県内の陽性反応者数の推移"
+            title="千葉県内の新規陽性反応者数の推移"
             :title-id="'number-of-confirmed-cases-chiba'"
             :chart-id="'time-bar-chart-patients-chiba'"
             :chart-data="patientsChibaGraph"
