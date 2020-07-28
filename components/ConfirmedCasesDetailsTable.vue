@@ -34,7 +34,7 @@
             <li :class="[$style.box, $style.short, $style.minor]">
               <div :class="$style.pillar">
                 <div :class="$style.content">
-                  <span>入院中</span>
+                  <span>入院中（重症含む）</span>
                   <span>
                     <strong>{{ 入院中.toLocaleString() }}</strong>
                     <span :class="$style.unit">人</span>
@@ -132,10 +132,10 @@ export default Vue.extend({
       type: Number,
       required: true
     },
-//    軽症中等症: {
-//      type: Number,
-//      required: true
-//    },
+    //    軽症中等症: {
+    //      type: Number,
+    //      required: true
+    //    },
     入院中: {
       type: Number,
       required: true
