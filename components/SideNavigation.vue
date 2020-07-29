@@ -72,6 +72,16 @@
                 {{ $t('Chiba Prefecture') }}
               </a>
             </dd>
+            <dd>
+              <a
+                href="https://www.city.matsudo.chiba.jp/"
+                target="_blank"
+                rel="noopener"
+                class="sponsor__data"
+              >
+                {{ $t('Matsudo City') }}
+              </a>
+            </dd>
           </dl>
         </div>
       </footer>
@@ -86,9 +96,9 @@
     "Navi Close": "サイドメニュー項目を閉じる",
     "Prefecture": "千葉県",
     "COVID-19": "新型コロナウイルス感染症",
-    "Measures site": "対策サイト",
+    "Measures site": "非公式対策サイト",
     "Chiba Prefecture": "千葉県",
-    "Chiba City": "千葉市",
+    "Matsudo City": "松戸市",
     "The latest updates": "松戸市の最新感染動向",
     "Information": "お知らせ一覧",
     "for Families with children": "お子様をお持ちの皆様へ",
@@ -158,7 +168,7 @@ export default {
         },
         {
           title: this.$t('Chiba COVID19 site'),
-          link: 'https://covid19.civictech.chiba.jp',
+          link: 'https://covid19.civictech.chiba.jp'
         },
         {
           title: this.$t('Tokyo COVID19 site'),
