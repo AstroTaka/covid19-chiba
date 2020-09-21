@@ -1,6 +1,11 @@
 {
   "newsItems": [
     {
+      "date": "2020-09-21T08:00:00.000Z",
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
+      "title": "新たに5名の新型コロナウイルス感染者が確認されました（9月21日）"
+    },
+    {
       "date": "2020-09-19T08:00:00.000Z",
       "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
       "title": "新たに4名の新型コロナウイルス感染者が確認されました（9月19日）"
@@ -602,13 +607,13 @@
     },
     {
       "date": "2020-07-18T09:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
-      "title": "新たに2名の新型コロナウイルス感染者が確認されました（7月18日）"
+      "link": "http://www.city.matsudo.chiba.jp/kyouiku/oshirase/1.html",
+      "title": "市内中学校の新型コロナウイルス感染症感染に伴う臨時休業について"
     },
     {
       "date": "2020-07-18T09:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kyouiku/oshirase/1.html",
-      "title": "市内中学校の新型コロナウイルス感染症感染に伴う臨時休業について"
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/ncovpatient.html",
+      "title": "新たに2名の新型コロナウイルス感染者が確認されました（7月18日）"
     },
     {
       "date": "2020-07-17T07:00:00.000Z",
@@ -872,13 +877,13 @@
     },
     {
       "date": "2020-05-26T05:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kyouiku/oshirase/gakkoutaiou.html",
-      "title": "新型コロナウイルス感染症に係る学校の対応について"
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/index.html",
+      "title": "新型コロナウイルスに関する支援・予防情報リーフレットを作成しました"
     },
     {
       "date": "2020-05-26T05:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/index.html",
-      "title": "新型コロナウイルスに関する支援・予防情報リーフレットを作成しました"
+      "link": "http://www.city.matsudo.chiba.jp/kyouiku/oshirase/gakkoutaiou.html",
+      "title": "新型コロナウイルス感染症に係る学校の対応について"
     },
     {
       "date": "2020-05-26T03:00:00.000Z",
@@ -1162,13 +1167,13 @@
     },
     {
       "date": "2020-05-01T09:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/jigyosya/chushoncov/shinbijinesu.html",
-      "title": "新型コロナウイルス対策売上回復支援補助金を創設しました。"
+      "link": "http://www.city.matsudo.chiba.jp/jigyosya/chushoncov/hosho.html",
+      "title": "新型コロナウイルス感染症対策保証料補助金"
     },
     {
       "date": "2020-05-01T09:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/jigyosya/chushoncov/hosho.html",
-      "title": "新型コロナウイルス感染症対策保証料補助金"
+      "link": "http://www.city.matsudo.chiba.jp/jigyosya/chushoncov/shinbijinesu.html",
+      "title": "新型コロナウイルス対策売上回復支援補助金を創設しました。"
     },
     {
       "date": "2020-05-01T08:00:00.000Z",
@@ -1207,13 +1212,13 @@
     },
     {
       "date": "2020-04-30T06:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/jigyosya/chushoncov/shinbijinesu.html",
-      "title": "新型コロナウイルス対策売上回復支援補助金を創設しました。"
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/vsncov.html",
+      "title": "松戸市独自の新型コロナウイルス緊急対策"
     },
     {
       "date": "2020-04-30T06:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/vsncov.html",
-      "title": "松戸市独自の新型コロナウイルス緊急対策"
+      "link": "http://www.city.matsudo.chiba.jp/jigyosya/chushoncov/shinbijinesu.html",
+      "title": "新型コロナウイルス対策売上回復支援補助金を創設しました。"
     },
     {
       "date": "2020-04-30T05:00:00.000Z",
@@ -1222,13 +1227,13 @@
     },
     {
       "date": "2020-04-30T01:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/jigyosya/chushoncov/hosho.html",
-      "title": "新型コロナウイルス感染症対策保証料補助金"
+      "link": "http://www.city.matsudo.chiba.jp/jigyosya/chushoncov.html",
+      "title": "新型コロナウイルス感染症の影響を受ける中小企業者への支援情報"
     },
     {
       "date": "2020-04-30T01:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/jigyosya/chushoncov.html",
-      "title": "新型コロナウイルス感染症の影響を受ける中小企業者への支援情報"
+      "link": "http://www.city.matsudo.chiba.jp/jigyosya/chushoncov/hosho.html",
+      "title": "新型コロナウイルス感染症対策保証料補助金"
     },
     {
       "date": "2020-04-30T00:00:00.000Z",
@@ -1462,11 +1467,6 @@
     },
     {
       "date": "2020-04-08T05:00:00.000Z",
-      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/eventcancelncov.html",
-      "title": "新型コロナウイルス感染症拡大防止のため中止・延期になったイベント等"
-    },
-    {
-      "date": "2020-04-08T05:00:00.000Z",
       "link": "http://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku_chugaku/houkagojidou/index.html",
       "title": "新型コロナウイルス感染症拡大防止のための放課後児童クラブの対応について"
     },
@@ -1474,6 +1474,11 @@
       "date": "2020-04-08T05:00:00.000Z",
       "link": "http://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/itijiazuketai/byouji_byougojihoiku/day-serves.html",
       "title": "新型コロナウイルスの感染拡大防止に伴う病児・病後児保育施設の対応について　"
+    },
+    {
+      "date": "2020-04-08T05:00:00.000Z",
+      "link": "http://www.city.matsudo.chiba.jp/kenko_fukushi/kansenshou/eventcancelncov.html",
+      "title": "新型コロナウイルス感染症拡大防止のため中止・延期になったイベント等"
     },
     {
       "date": "2020-04-08T04:00:00.000Z",
