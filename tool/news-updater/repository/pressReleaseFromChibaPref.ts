@@ -27,7 +27,7 @@ const convertRssItemToNewsItem = (
 })
 
 const checkItemRelatedToCovid19 = (item: RssNewsItemResponse): boolean => {
-  return item.title.includes('コロナウイルス')
+  return item.title.includes('コロナ')
 }
 
 export const getNewsFromPressReleaseFromChibaPrefecture = async (): Promise<NewsItem[]> => {
