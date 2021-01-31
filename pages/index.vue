@@ -19,7 +19,7 @@
       <v-row class="DataBlock">
         <v-col cols="12" md="6" class="DataCard">
           <time-bar-chart
-            title="松戸市の陽性反応者数の推移"
+            title="松戸市の陽性者数の確定日別の推移"
             :title-id="'number-of-confirmed-cases'"
             :chart-id="'time-bar-chart-patients'"
             :chart-data="patientsGraph"
