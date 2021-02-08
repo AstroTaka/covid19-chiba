@@ -56,6 +56,17 @@
             <li :class="[$style.box, $style.short, $style.minor]">
               <div :class="$style.pillar">
                 <div :class="$style.content">
+                  <span>自宅療養</span>
+                  <span>
+                    <strong>{{ 自宅療養.toLocaleString() }}</strong>
+                    <span :class="$style.unit">人</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li :class="[$style.box, $style.short, $style.minor]">
+              <div :class="$style.pillar">
+                <div :class="$style.content">
                   <span>ホテル療養</span>
                   <span>
                     <strong>{{ ホテル療養.toLocaleString() }}</strong>
@@ -141,6 +152,10 @@ export default Vue.extend({
       required: true
     },
     入院調整中: {
+      type: Number,
+      required: true
+    },
+    自宅療養: {
       type: Number,
       required: true
     },

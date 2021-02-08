@@ -277,6 +277,7 @@ export default {
         data.home_stay_count +
         data.other_count,
       入院中: data.hospital_count,
+      自宅療養: data.home_stay_count,
       入院調整中: data.hospital_waiting_count,
       ホテル療養: data.hotel_stay_count,
       その他: data.other_count,
