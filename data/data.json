@@ -1,6 +1,6 @@
 {
   "inspections": {
-    "date": "2021/04/07 20:41",
+    "date": "2021/04/08 11:02",
     "data": [
       {
         "日付": "1/25/2020",
@@ -2621,7 +2621,7 @@
     ]
   },
   "inspections_summary": {
-    "date": "2021/04/07 20:41",
+    "date": "2021/04/08 11:02",
     "data": {
       "陽性": [
         0,
@@ -3940,7 +3940,7 @@
     ]
   },
   "current_patients": {
-    "date": "2021/04/07 20:41",
+    "date": "2021/04/08 11:02",
     "data": [
       {
         "日付": "4/15/2020",
@@ -6809,7 +6809,7 @@
     ]
   },
   "current_patients_summary": {
-    "date": "2021/04/07 20:41",
+    "date": "2021/04/08 11:02",
     "data": {
       "入院中": [
         207,
@@ -8974,7 +8974,7 @@
     ]
   },
   "patients_chiba": {
-    "date": "2021/04/07 20:41",
+    "date": "2021/04/08 11:02",
     "data": [
       {
         "日付": "1/30/2020",
@@ -36654,7 +36654,7 @@
     ]
   },
   "patients_summary": {
-    "date": "2021/04/07 20:41",
+    "date": "2021/04/08 11:02",
     "data": {
       "確定数": [
         2,
@@ -37964,19 +37964,19 @@
     ]
   },
   "main_summary": {
-    "date": "2021/04/07 20:41",
+    "date": "2021/04/08 11:02",
     "target_date": "4/7/2021",
     "inspections_total_count": 489361,
     "patients_count": 30279,
     "hospital_count": 379,
-    "hospital_waiting_count": 162,
-    "hotel_stay_count": 202,
-    "home_stay_count": 270,
+    "hospital_waiting_count": 161,
+    "hotel_stay_count": 205,
+    "home_stay_count": 268,
     "discharge_count": 7472,
     "finish_stay_count": 21185,
     "death_count": 581,
     "other_count": 28,
     "severe_injury_count": 14
   },
-  "lastUpdate": "2021/04/07 20:41"
+  "lastUpdate": "2021/04/08 11:02"
 }
